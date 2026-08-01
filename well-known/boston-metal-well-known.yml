@@ -1,0 +1,45 @@
+generated: '2026-07-31'
+method: probed
+source: live probes of https://www.bostonmetal.com/.well-known/*
+host: https://www.bostonmetal.com
+also_probed:
+- host: https://bostonmetal.com.br
+  note: Brazilian subsidiary domain; resolves to the same origin IP (35.208.211.231)
+    and returns the same 202 captcha challenge on /, /.well-known/security.txt,
+    /.well-known/agent-card.json, /openapi.json and /llms.txt
+note: >-
+  Every path on this host — including every /.well-known/ path, /robots.txt and
+  /sitemap.xml — answers HTTP 202 with a SiteGround bot-challenge shell
+  (response header `sg-captcha: challenge`, body is an HTML meta-refresh to
+  /.well-known/sgcaptcha/). No probed path returned a real document, so no
+  discovery document could be harvested. The 202 responses are edge-challenge
+  HTML, NOT provider-published artifacts, and are recorded here as misses.
+documents: []
+probes:
+- path: /.well-known/security.txt
+  status: 202
+  result: captcha-challenge
+- path: /security.txt
+  status: 202
+  result: captcha-challenge
+- path: /.well-known/openid-configuration
+  status: 202
+  result: captcha-challenge
+- path: /.well-known/oauth-authorization-server
+  status: 202
+  result: captcha-challenge
+- path: /.well-known/api-catalog
+  status: 202
+  result: captcha-challenge
+- path: /.well-known/ai-plugin.json
+  status: 202
+  result: captcha-challenge
+- path: /.well-known/agent-card.json
+  status: 202
+  result: captcha-challenge
+- path: /.well-known/agent.json
+  status: 202
+  result: captcha-challenge
+- path: /llms.txt
+  status: 202
+  result: captcha-challenge

@@ -1,7 +1,30 @@
 aid: boston-metal
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-31'
+  method: derived
 name: Boston Metal
-description: 'Boston Metal is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Boston Metal is an industrial metals and materials company founded in 2013 and
+  headquartered in Woburn, Massachusetts, with a wholly owned subsidiary and
+  commercial plant in Brazil. The company commercializes Molten Oxide
+  Electrolysis (MOE), a one-step electrochemical process that uses clean
+  electricity rather than fossil fuels to reduce iron ore into liquid metal,
+  producing steel with no direct CO2 emissions, and to recover high-value
+  critical metals such as niobium and tantalum from low-grade ore and mining
+  waste. Boston Metal commissioned a multi-inert-anode industrial MOE cell at
+  its Woburn facility and has raised over $500 million from investors including
+  Tata Steel. Boston Metal is a physical process-technology and manufacturing
+  company; it publishes no public developer API, SDK, OpenAPI definition,
+  developer portal, or machine-readable contract of any kind. This profile
+  captures its public web, corporate, and domain-security posture only.
 url: https://raw.githubusercontent.com/api-evangelist/boston-metal/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +35,14 @@ created: '2026-07-31'
 modified: '2026-07-31'
 tags:
 - Company
+- Green Steel
+- Metals
+- Molten Oxide Electrolysis
+- Critical Minerals
+- Advanced Materials
+- Manufacturing
+- Decarbonization
+- Climate Tech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +50,36 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/boston-metal-domain-security.yml
+- type: LLMsTxt
+  url: llms/boston-metal-llms.txt
 - type: Website
+  url: https://www.bostonmetal.com/
+- type: About
+  url: https://www.bostonmetal.com/about/
+- type: Technology
+  url: https://www.bostonmetal.com/moe-technology/
+- type: News
+  url: https://www.bostonmetal.com/news/
+- type: Careers
+  url: https://www.bostonmetal.com/careers/
+- type: Contact
+  url: https://www.bostonmetal.com/contact-us/
+- type: PrivacyPolicy
+  url: https://www.bostonmetal.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.bostonmetal.com/terms-of-use/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/bostonmetal
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/boston-metal
+- type: Wikipedia
+  url: https://en.wikipedia.org/wiki/Boston_Metal
+- type: SecondaryMarket
   url: https://forgeglobal.com/boston-metal_stock/
+x-enrichment:
+  date: '2026-07-31'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
